@@ -1,0 +1,149 @@
+<svg width="150" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for enhanced visuals -->
+    <linearGradient id="snakeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ladderGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a16207;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#713f12;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="playerGradient1" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#fca5a5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="playerGradient2" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="playerGradient3" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#fde047;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ca8a04;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="boardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Enhanced Background with gradient -->
+  <rect width="150" height="100" fill="url(#boardGradient)"/>
+
+  <!-- Enhanced Game board grid (6x4 for better representation) -->
+  <g stroke="#cbd5e1" stroke-width="0.8">
+    <!-- Row 1 -->
+    <rect x="8" y="8" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="20" y="8" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="32" y="8" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="44" y="8" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="56" y="8" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="68" y="8" width="12" height="12" fill="#f1f5f9" rx="1"/>
+
+    <!-- Row 2 -->
+    <rect x="8" y="20" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="20" y="20" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="32" y="20" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="44" y="20" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="56" y="20" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="68" y="20" width="12" height="12" fill="#ffffff" rx="1"/>
+
+    <!-- Row 3 -->
+    <rect x="8" y="32" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="20" y="32" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="32" y="32" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="44" y="32" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="56" y="32" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="68" y="32" width="12" height="12" fill="#f1f5f9" rx="1"/>
+
+    <!-- Row 4 -->
+    <rect x="8" y="44" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="20" y="44" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="32" y="44" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="44" y="44" width="12" height="12" fill="#ffffff" rx="1"/>
+    <rect x="56" y="44" width="12" height="12" fill="#f1f5f9" rx="1"/>
+    <rect x="68" y="44" width="12" height="12" fill="#ffffff" rx="1"/>
+  </g>
+
+  <!-- Enhanced Snake with gradient and pattern -->
+  <g filter="url(#shadow)">
+    <path d="M 15 14 Q 25 6 35 14 Q 45 22 55 14 Q 65 6 75 14" stroke="url(#snakeGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Snake head -->
+    <ellipse cx="75" cy="14" rx="3" ry="2.5" fill="url(#snakeGradient)"/>
+    <circle cx="76" cy="13" r="0.8" fill="#ffffff"/>
+    <circle cx="76" cy="13" r="0.4" fill="#000000"/>
+    <!-- Snake tail -->
+    <ellipse cx="15" cy="14" rx="2" ry="1.5" fill="url(#snakeGradient)"/>
+    <!-- Snake body segments -->
+    <circle cx="25" cy="10" r="1.5" fill="#047857" opacity="0.8"/>
+    <circle cx="45" cy="18" r="1.5" fill="#047857" opacity="0.8"/>
+    <circle cx="65" cy="10" r="1.5" fill="#047857" opacity="0.8"/>
+  </g>
+
+  <!-- Second Snake -->
+  <g filter="url(#shadow)">
+    <path d="M 25 50 Q 35 42 45 50 Q 55 58 65 50" stroke="url(#snakeGradient)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="65" cy="50" rx="2.5" ry="2" fill="url(#snakeGradient)"/>
+    <circle cx="66" cy="49.5" r="0.6" fill="#ffffff"/>
+    <circle cx="66" cy="49.5" r="0.3" fill="#000000"/>
+    <ellipse cx="25" cy="50" rx="1.5" ry="1.2" fill="url(#snakeGradient)"/>
+  </g>
+
+  <!-- Enhanced Ladders with gradient and 3D effect -->
+  <g filter="url(#shadow)">
+    <!-- First Ladder -->
+    <g stroke="url(#ladderGradient)" stroke-width="2.5" stroke-linecap="round">
+      <line x1="38" y1="48" x2="38" y2="24"/>
+      <line x1="42" y1="48" x2="42" y2="24"/>
+      <line x1="38" y1="46" x2="42" y2="46"/>
+      <line x1="38" y1="42" x2="42" y2="42"/>
+      <line x1="38" y1="38" x2="42" y2="38"/>
+      <line x1="38" y1="34" x2="42" y2="34"/>
+      <line x1="38" y1="30" x2="42" y2="30"/>
+      <line x1="38" y1="26" x2="42" y2="26"/>
+    </g>
+    <!-- Second Ladder -->
+    <g stroke="url(#ladderGradient)" stroke-width="2" stroke-linecap="round">
+      <line x1="62" y1="38" x2="62" y2="22"/>
+      <line x1="66" y1="38" x2="66" y2="22"/>
+      <line x1="62" y1="36" x2="66" y2="36"/>
+      <line x1="62" y1="32" x2="66" y2="32"/>
+      <line x1="62" y1="28" x2="66" y2="28"/>
+      <line x1="62" y1="24" x2="66" y2="24"/>
+    </g>
+  </g>
+
+  <!-- Enhanced Player pieces with gradients and shadows -->
+  <g filter="url(#shadow)">
+    <circle cx="14" cy="14" r="3.5" fill="url(#playerGradient1)" stroke="#ffffff" stroke-width="0.5"/>
+    <circle cx="26" cy="26" r="3.5" fill="url(#playerGradient2)" stroke="#ffffff" stroke-width="0.5"/>
+    <circle cx="50" cy="38" r="3.5" fill="url(#playerGradient3)" stroke="#ffffff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Enhanced Dice with 3D effect -->
+  <g transform="translate(85, 12)" filter="url(#shadow)">
+    <rect x="0" y="0" width="22" height="22" rx="4" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+    <rect x="1" y="1" width="20" height="20" rx="3" fill="#f8fafc"/>
+    <!-- Dice dots for number 5 -->
+    <circle cx="7" cy="7" r="1.8" fill="#1e293b"/>
+    <circle cx="15" cy="7" r="1.8" fill="#1e293b"/>
+    <circle cx="11" cy="11" r="1.8" fill="#1e293b"/>
+    <circle cx="7" cy="15" r="1.8" fill="#1e293b"/>
+    <circle cx="15" cy="15" r="1.8" fill="#1e293b"/>
+  </g>
+
+  <!-- Enhanced decorative elements -->
+  <g opacity="0.6">
+    <circle cx="125" cy="65" r="6" fill="#8b5cf6" filter="url(#shadow)"/>
+    <circle cx="135" cy="75" r="4" fill="#06b6d4" filter="url(#shadow)"/>
+    <circle cx="115" cy="80" r="3" fill="#f59e0b" filter="url(#shadow)"/>
+  </g>
+
+  <!-- Game title area indicator -->
+  <rect x="85" y="40" width="60" height="25" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" opacity="0.8"/>
+  <rect x="87" y="42" width="56" height="21" rx="6" fill="#ffffff" opacity="0.9"/>
+</svg>
